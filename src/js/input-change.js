@@ -26,3 +26,4 @@ const checkedTheme = event => {
 };
 
 refs.inputCheckbox.addEventListener('change', checkedTheme);
+

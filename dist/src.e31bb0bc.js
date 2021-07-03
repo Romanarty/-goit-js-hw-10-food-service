@@ -196,7 +196,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var refs = {
+const refs = {
   body: document.body,
   inputCheckbox: document.querySelector('#theme-switch-toggle'),
   menuList: document.querySelector('.js-menu')
@@ -210,7 +210,7 @@ var _refs = _interopRequireDefault(require("./refs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Theme = {
+const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
 };
@@ -221,7 +221,7 @@ if (_refs.default.body.classList.value === Theme.DARK) {
   _refs.default.inputCheckbox.checked = true;
 }
 
-var checkedTheme = function checkedTheme(event) {
+const checkedTheme = event => {
   if (event.target.checked) {
     localStorage.setItem('theme', Theme.DARK);
 
@@ -2321,10 +2321,8 @@ var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.run
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
     var stack1,
         helper,
         alias1 = depth0 != null ? depth0 : container.nullContext || {},
@@ -2339,7 +2337,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<li class=\"menu__item\">\n    <div class=\"card\">\n        <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "image") || (depth0 != null ? lookupProperty(depth0, "image") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<li class=\"menu__item\">\n    <div class=\"card\">\n        <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "image") || (depth0 != null ? lookupProperty(depth0, "image") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "image",
       "hash": {},
       "data": data,
@@ -2353,7 +2351,7 @@ var templateFunction = _handlebars.default.template({
           "column": 27
         }
       }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2367,7 +2365,7 @@ var templateFunction = _handlebars.default.template({
           "column": 42
         }
       }
-    }) : helper)) + "\" class=\"card__image\" />\n        <div class=\"card__content\">\n            <h2 class=\"card__name\">" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" class=\"card__image\" />\n        <div class=\"card__content\">\n            <h2 class=\"card__name\">" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2381,7 +2379,7 @@ var templateFunction = _handlebars.default.template({
           "column": 43
         }
       }
-    }) : helper)) + "</h2>\n            <p class=\"card__price\">\n                <i class=\"material-icons\">\n                    monetization_on\n                </i>\n                " + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h2>\n            <p class=\"card__price\">\n                <i class=\"material-icons\">\n                    monetization_on\n                </i>\n                " + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "price",
       "hash": {},
       "data": data,
@@ -2395,7 +2393,7 @@ var templateFunction = _handlebars.default.template({
           "column": 25
         }
       }
-    }) : helper)) + "\n            </p>\n            <p class=\"card__descr\">" + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\n            </p>\n            <p class=\"card__descr\">" + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "description",
       "hash": {},
       "data": data,
@@ -2427,11 +2425,11 @@ var templateFunction = _handlebars.default.template({
       }
     })) != null ? stack1 : "") + "            </ul>\n        </div>\n        <button class=\"card__button button\">\n            <i class=\"material-icons button__icon\">\n                shopping_cart\n            </i>\n            В корзину\n        </button>\n    </div>\n</li>\n";
   },
-  "2": function _(container, depth0, helpers, partials, data) {
+  "2": function (container, depth0, helpers, partials, data) {
     return "                <li class=\"tag-list__item\">" + container.escapeExpression(container.lambda(depth0, depth0)) + "</li>\n";
   },
   "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
+  "main": function (container, depth0, helpers, partials, data) {
     var stack1,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -2483,7 +2481,7 @@ console.log(_menu.default);
 console.log((0, _template.default)({
   food: _menu.default
 }));
-var FoodServiceItemsGallery = document.querySelector('.js-menu');
+const FoodServiceItemsGallery = document.querySelector('.js-menu');
 FoodServiceItemsGallery.innerHTML = (0, _template.default)(_menu.default);
 },{"./sass/main.scss":"sass/main.scss","./js/input-change":"js/input-change.js","./menu.json":"menu.json","./template.hbs":"template.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -2513,7 +2511,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53939" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
